@@ -1,4 +1,7 @@
 [siteswitch]
+# 4/10/2012 - This is no longer used!  The config is now in move-to-live.py or alter-database.py.
+
+
 # Don't include http://www on these - so phpure.com would be correct, not www.phpure.com
 #   or http://www.phpure.com
 old_domain: test.com
