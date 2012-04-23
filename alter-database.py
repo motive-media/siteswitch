@@ -77,7 +77,12 @@ for site in sites:
                 len_start = db_content.rfind("s:", 0, the_start) + 2
                 len_end = db_content.find(":", len_start)
 
-                old_len = int(db_content[len_start:len_end])
+                try:
+                    old_len = int(db_content[len_start:len_end])
+                except:
+                    db_content = db_content[:the_start] + site['new_domain'] + db_content[the_end:]
+                    continue
+
                 len_diff = len(site['new_domain']) - len(group)
                 new_len = old_len + len_diff
 
